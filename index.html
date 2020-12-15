@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | RollerMadness</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Version1.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <!--div class="webgl-logo"></div-->
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <!--div class="title">RollerMadness</div-->
+	<div>
+        <pre>
+	ROLLER MADNESS
+			by Joel Shaji 
+	
+	--> Move the roller ball around using arrow keys or 'WASD' to collect coins and avoid enemy cubes.
+ 	--> The score at the top shows how many coins you have collected and how many more you need to collect to beat the level.
+	--> The number of lives you have and your health points are displayed at the top right corner.
+        --> Level two is harder as the enemies are faster and there are more coins to collect. All the best!
+	
+	THANKYOU FOR TESTING MY PROJECT :D !
+        </pre>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
