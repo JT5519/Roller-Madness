@@ -3,6 +3,10 @@
 Click [here](https://jt5519.github.io/Roller-Madness/index.html) to play the game on a GitHub static page!
 
 An arcade style game with a hyperactive ball, some determined enemies, some bouncy obstacles, and some coins to collect!
-You must control a roller ball that is fast but really eager to fall of the edges of the area. Bouncy obstacles and chasing enemies only make it harder to stay on top. Collect the required number of coins before the enemies kill you!
 
 
+
+## Some other games by me
+* [Spirit In Me - A horror survival/action game](https://github.com/JT5519/Spirit-In-Me)
+* [FPPPS - An FPS game](https://github.com/JT5519/First-FPS)
+* [Solar System Model](https://github.com/JT5519/Solar-System)
