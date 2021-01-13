@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-//[RequireComponent(typeof(CharacterController))]
-
+//script attached to enemies to chase ball
 public class Chaser : MonoBehaviour {
 	
 	public float speed = 20.0f;

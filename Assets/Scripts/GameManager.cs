@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
-
+//game manager to manage game state
 public class GameManager : MonoBehaviour {
 
 	public static GameManager gm;
@@ -40,11 +39,11 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		if (gm == null) 
 			gm = gameObject.GetComponent<GameManager>();
-
+		//player
 		if (player == null) {
 			player = GameObject.FindWithTag("Player");
 		}
-
+		//player heath
 		playerHealth = player.GetComponent<Health>();
 
 		// setup score display
@@ -114,7 +113,7 @@ public class GameManager : MonoBehaviour {
 
 	}
 
-
+	//called when coin is collected to add to score, see Treasure.cs
 	public void Collect(int amount) {
 		score += amount;
 		if (canBeatLevel) {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//script to rotate coins 
 public class Rotate : MonoBehaviour {
 	
 	public float speed = 10.0f;
@@ -9,11 +9,6 @@ public class Rotate : MonoBehaviour {
 
 	public whichWayToRotate way = whichWayToRotate.AroundX;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//script to spawn gameobjects
 public class SpawnGameObjects : MonoBehaviour {
 
 	public GameObject spawnPrefab;
@@ -23,6 +23,7 @@ public class SpawnGameObjects : MonoBehaviour {
 	void Update () {
 		if (gameObject.tag == "EnemySpawner")
 		{
+			//only if seconds between spawns has been waited and number of enemies are less than 5 (i.e. maximum, 5 enemies at a time)
 			if (Time.time - savedTime >= secondsBetweenSpawning && GameObject.FindGameObjectsWithTag("Enemy").Length < 5) // is it time to spawn again?
 			{
 				MakeThingToSpawn();
@@ -32,7 +33,9 @@ public class SpawnGameObjects : MonoBehaviour {
 		}
         else
         {
-			if (Time.time - savedTime >= secondsBetweenSpawning && GameObject.FindGameObjectsWithTag(gameObject.tag).Length < 2) // is it time to spawn again?
+			//maximum coins from a particular spawner at a time = 1, total spawners 4 so total 4 coins at a time max
+			//coins and the spawners they come from have the same tag. coin from spawner1 and spawner1 have tag spawner1, same for 2 and so on
+			if (Time.time - savedTime >= secondsBetweenSpawning && GameObject.FindGameObjectsWithTag(gameObject.tag).Length < 2)
 			{
 				MakeThingToSpawn();
 				savedTime = Time.time; // store for next spawn
@@ -40,7 +43,7 @@ public class SpawnGameObjects : MonoBehaviour {
 			}
 		}
 	}
-
+	//spawn function
 	void MakeThingToSpawn()
 	{
 		// create a new gameObject

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-
+//script to control the ball movement 
 namespace UnityStandardAssets.Vehicles.Ball
 {
     public class BallUserControlM : MonoBehaviour
@@ -27,12 +27,6 @@ namespace UnityStandardAssets.Vehicles.Ball
             {
                 cam = Camera.main.transform;
             }
-            else
-            {
-                Debug.LogWarning(
-                    "Warning: no main camera found. Ball needs a Camera tagged \"MainCamera\", for camera-relative controls.");
-                // we use world-relative controls in this case, which may not be what the user wants, but hey, we warned them!
-            }
         }
 
 
@@ -42,7 +36,7 @@ namespace UnityStandardAssets.Vehicles.Ball
 
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            jump = CrossPlatformInputManager.GetButton("Jump");
+            jump = CrossPlatformInputManager.GetButton("Jump"); //never ended up using jump, still kept it
 
             // calculate move direction
             if (cam != null)
@@ -53,7 +47,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             }
             else
             {
-                // we use world-relative directions in the case of no main camera
+                //use world-relative directions in the case of no main camera
                 move = (v*Vector3.forward + h*Vector3.right).normalized;
             }
         }

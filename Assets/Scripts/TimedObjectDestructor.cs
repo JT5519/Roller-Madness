@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//script to destroy objects after a certain amount of time
 public class TimedObjectDestructor : MonoBehaviour {
 
 	public float timeOut = 1.0f;
@@ -12,10 +12,6 @@ public class TimedObjectDestructor : MonoBehaviour {
 		Invoke ("DestroyNow", timeOut);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 	
 	void DestroyNow ()
 	{

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Vehicles.Ball;
-
+//script that handles health of objects it is attached to
 public class Health : MonoBehaviour {
 	
 	public enum deathAction {loadLevelWhenDead,doNothingWhenDead};
@@ -34,7 +34,7 @@ public class Health : MonoBehaviour {
 			LevelToLoad = Application.loadedLevelName;
 		}
 		rb = GetComponent<Rigidbody>();
-		StartCoroutine(HealthCo());
+		StartCoroutine(HealthCo()); //routine to handle health
 	}
 
 
